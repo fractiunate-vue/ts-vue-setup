@@ -37,8 +37,16 @@ node ../node_modules/eslint/bin/eslint --init
 npm init @eslint/config
 
 ```
+### Run or Lint (-fix)
 
-### Express Generator
+```bash
+npm run dev
+
+npm run lint
+npm run lint-and-fix
+```
+
+### [Express Generator]
 
 ```bash
 sudo npm install -g express-generator
