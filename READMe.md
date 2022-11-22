@@ -18,7 +18,7 @@ npm run dev
 ```bash
 mkdir server && cd server;
 npm init
-npm i express dotenv
+npm i express dotenv body-parser cors morgan
 npm i -D typescript @types/express @types/node
 # Generating tsconfig.json
 npx tsc --init
