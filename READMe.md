@@ -31,6 +31,11 @@ npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslin
 # BROKEN /X/ but cool Idea v
 # npm install eslint-plugin-shopify --save-dev # Shopify-es-lint
 
+# create .eslintrc file or run
+node ../node_modules/eslint/bin/eslint --init
+# or
+npm init @eslint/config
+
 ```
 
 ### Express Generator
