@@ -28,6 +28,8 @@ npm install -D concurrently nodemon
 
 # ESLint with TS
 npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+# BROKEN /X/ but cool Idea v
+# npm install eslint-plugin-shopify --save-dev # Shopify-es-lint
 
 ```
 
