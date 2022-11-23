@@ -68,3 +68,4 @@ vuex --> Framework to do it a flux "way" (key/obj store?)
 - https://blog.logrocket.com/how-to-set-up-node-typescript-express
 - ESLint for server: https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/
 - https://www.sqlite.org/index.html
+- https://sequelize.org/
