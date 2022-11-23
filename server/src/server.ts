@@ -23,6 +23,12 @@ app.get('/healthcheck', (req: Request, res: Response) => {
     res.send({ status: "Ok", code: 200 })
 });
 
+app.post('/register', (req: Request, res: Response) => {
+    res.send({
+        message: `Hello ${req.body.email}! Your registration was successful!`
+    });
+});
+
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
 });

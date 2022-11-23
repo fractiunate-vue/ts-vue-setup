@@ -5,6 +5,8 @@
 ```bash
 sudo npm i -g vue-cli
 
+npm i -D axios
+
 vue init webpack client
 ```
 ### Run Client Web App (dev)
@@ -52,6 +54,10 @@ npm run lint-and-fix
 sudo npm install -g express-generator
 express -h
 ```
+
+## Frameworks
+
+vuex --> Framework to do it a flux "way" (key/obj store?) 
 
 ## Sources
 
