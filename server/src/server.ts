@@ -1,14 +1,15 @@
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 import cors from 'cors';
 // Process JSON easily
 import bodyParser from 'body-parser';
 // Prettify Logs 
 import morgan from 'morgan';
-import { sequelize } from './models'
+import { db } from './models/index'
 import routes from './routes'
+import config from './config/config'
 
-dotenv.config();
+// dotenv.config();
 
 const app: Express = express();
 
@@ -19,15 +20,11 @@ app.use(cors());
 
 routes(app);
 
+// console.log(sequelize);
+const host = config.host;
+const port = config.port;
 
-console.log(sequelize);
-
-const port = process.env.PORT || 3000;
-const host = process.env.HOST || "0.0.0.0";
-
-
-
-sequelize.sync()
+db.sequelize.sync()
     .then(() => {
         app.listen(port, () => {
             // let display_host = host === "0.0.0.0" ? "localhost" : host
@@ -36,5 +33,3 @@ sequelize.sync()
             console.log(`⚡️[server]: Server is running at http://${display_host}:${port}`);
         });
     });
-
-
