@@ -6,6 +6,7 @@ const path = require('path') // Access Path
 const config = require('../config/config')
 
 
+// https://stackoverflow.com/questions/12710905/how-do-i-dynamically-assign-properties-to-an-object-in-typescript
 interface iDb {
     sequelize: Sequelize,
     Sequelize: Function,
