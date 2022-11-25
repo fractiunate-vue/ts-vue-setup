@@ -1,9 +1,8 @@
-import { monitorEventLoopDelay } from "perf_hooks"
+import { Sequelize, DataTypes } from 'sequelize';
+const config = require('../config/config');
+const fs = require('fs'); // Read Filesystem
 
-import { Sequelize, Model, DataTypes } from 'sequelize';
-const fs = require('fs') // Read Filesystem
-const path = require('path') // Access Path
-const config = require('../config/config')
+// const path = require('path'); // Access Path
 
 
 // https://stackoverflow.com/questions/12710905/how-do-i-dynamically-assign-properties-to-an-object-in-typescript
@@ -25,15 +24,15 @@ export const sequelize = new Sequelize(
     // }
 );
 
-let modelMap = {}
+const modelMap = {};
 fs
     .readdirSync(__dirname)
     .filter((file: string) =>
         file !== 'index.js'
     )
     .forEach((file: string) => {
-        // @ts-ignore
-        const model = require(`${__dirname}/${file}`)(sequelize, DataTypes);
+        /* eslint-disable */
+        const model = require(`${__dirname}/${file}`)(sequelize);
         // @ts-ignore
         modelMap[model.name] = model;
     });
@@ -43,4 +42,4 @@ export const db: iDb = {
     sequelize: sequelize,
     Sequelize: Sequelize,
     ...modelMap
-}
+};

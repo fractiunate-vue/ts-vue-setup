@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "joi": "^17.7.0"
+  }
+}
